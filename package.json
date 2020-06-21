@@ -6,15 +6,32 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.3.5",
+    "antd-dayjs-webpack-plugin": "^1.0.0",
+    "autoprefixer": "^9.8.2",
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^1.0.0",
+    "file-loader": "^6.0.0",
+    "less-loader": "^6.1.1",
+    "lodash": "^4.17.15",
+    "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "yarn run watch:css && react-app-rewired start",
+    "build": "yarn run build:css && react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "analyze": "ANALYZE=true&&yarn build",
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css",
+    "watch:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.4.6"
   }
 }
