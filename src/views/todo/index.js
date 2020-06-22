@@ -1,3 +1,4 @@
 import Daily from "./daily";
 import Weekly from "./weekly";
-export { Daily, Weekly };
+import RightInfo from "./rightInfo";
+export { Daily, Weekly, RightInfo };

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { OtherCard } from "../../../component";
 const Weekly = (props) => {
   return (
     <>
@@ -20,6 +20,10 @@ const Weekly = (props) => {
           <span className="text-lg mx-6 block">Add New Week Plan</span>
         </div>
       </div>
+
+      <OtherCard />
+      <OtherCard />
+      {/* <OtherCard /> */}
     </>
   );
 };

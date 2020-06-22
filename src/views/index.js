@@ -1,7 +1,8 @@
 import React from "react";
 import { Header } from "../component";
 import { Button, DatePicker, version, Row, Col } from "antd";
-import { Daily, Weekly } from "./todo";
+import { Daily, Weekly, RightInfo } from "./todo";
+
 const App = () => {
   return (
     <>
@@ -14,7 +15,9 @@ const App = () => {
           <Col md={{ span: 12 }} className="pr-12">
             <Daily />
           </Col>
-          <Col md={{ span: 5 }}></Col>
+          <Col md={{ span: 5 }}>
+            <RightInfo />
+          </Col>
         </Row>
       </div>
     </>

@@ -1,2 +1,3 @@
 import { Header } from "./molecule";
-export { Header };
+import { DailyCard, OtherCard } from "./atoms";
+export { Header, DailyCard, OtherCard };
