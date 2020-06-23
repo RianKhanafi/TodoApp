@@ -1,2 +1,3 @@
 import Header from "./header";
-export { Header };
+import AddCard from "./addCard";
+export { Header, AddCard };

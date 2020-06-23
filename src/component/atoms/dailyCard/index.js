@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Color } from "../../colors";
 
 const DailyCard = (props) => {
   const { mainCard, paragraph, list } = props;
@@ -10,6 +11,11 @@ const DailyCard = (props) => {
     iconPosition: mainCard ? "items-center" : "items-start",
   };
 
+  let style = {
+    backgroundColor: mainCard ? Color.primary : "",
+    Color: mainCard ? Color.textPrimary : "",
+  };
+
   return (
     <div className="flex items-center mt-6">
       <div className="mr-6 flex items-center">
@@ -18,10 +24,11 @@ const DailyCard = (props) => {
       <div className="w-full">
         <div
           className={`w-full ${classDailyCard.height} ${classDailyCard.mainCard} rounded-lg flex ${classDailyCard.iconPosition}`}
+          style={style}
         >
           <div className={`w-1/6  flex items-start`}>
             <div
-              className={`w-10 h-10 ${classDailyCard.icon} bg-white mx-6 rounded-lg`}
+              className={`w-10 h-10 ${classDailyCard.icon} bg-white mx-4 rounded-lg`}
             ></div>
           </div>
           <div className="w-4/6  h-auto flex-col items-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import { DailyCard } from "../../../component";
+import { DailyCard, AddCard } from "../../../component";
 const Daily = (props) => {
   return (
     <>
@@ -10,6 +10,7 @@ const Daily = (props) => {
       <DailyCard />
       <DailyCard mainCard={false} list={true} />
       <DailyCard mainCard={false} paragraph={true} />
+      <AddCard />
     </>
   );
 };
