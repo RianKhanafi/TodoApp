@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Color } from "../../colors";
+import { faCheck, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DailyCard = (props) => {
   const { mainCard, paragraph, list } = props;
@@ -9,17 +11,20 @@ const DailyCard = (props) => {
     icon: mainCard && !paragraph ? "bg-white" : "bg-gray-200",
     height: mainCard && !list ? "h-16" : "h-auto",
     iconPosition: mainCard ? "items-center" : "items-start",
+    position: mainCard ? "items-center" : "items-start mt-3",
   };
 
   let style = {
-    backgroundColor: mainCard ? Color.primary : "",
-    Color: mainCard ? Color.textPrimary : "",
+    backgroundColor: mainCard ? Color.blue : "",
+    color: mainCard ? Color.white : "",
   };
 
   return (
-    <div className="flex items-center mt-6">
+    <div className={`flex mt-6 ${classDailyCard.position}`}>
       <div className="mr-6 flex items-center">
-        <span>=</span>
+        <span>
+          <FontAwesomeIcon icon={mainCard ? faCheck : faMinus} />
+        </span>
       </div>
       <div className="w-full">
         <div

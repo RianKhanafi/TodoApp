@@ -22,7 +22,7 @@ module.exports = override(
     lessOptions: {
       javascriptEnabled: true,
       modifyVars: {
-        "@primary-color": "#F49952",
+        "@primary-color": "#508cc8",
         "@border-radius-base": "4px",
         "@box-shadow": "0px",
       },

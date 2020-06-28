@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Input, Checkbox, Button } from "antd";
+import { faPlus, faMinus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AddCard = () => {
   const [list, setList] = useState([
@@ -9,7 +11,7 @@ const AddCard = () => {
     },
   ]);
 
-  const handleAddList = (index) => {
+  const handleAddList = () => {
     let concatList = [];
     if (list[list.length - 1].title !== null) {
       concatList = list.concat([
@@ -20,6 +22,9 @@ const AddCard = () => {
       ]);
       setList(concatList);
     }
+  };
+  const handleRemove = () => {
+    setList(list.splice(-1));
   };
 
   const handleChangeText = (text, index) => {
@@ -48,16 +53,24 @@ const AddCard = () => {
               />
             </div>
             <div className="w-full">
-              <Input
-                name="title"
-                onChange={(text) => handleChangeText(text, index)}
-              />
+              {index + 1 === list.length ? (
+                <Input
+                  name="title"
+                  value={listType.title}
+                  onChange={(text) => handleChangeText(text, index)}
+                />
+              ) : (
+                <span>{listType.title}</span>
+              )}
             </div>
           </div>
         );
       })}
       <Button type="default" onClick={handleAddList} className="ml-10">
         Add New
+      </Button>
+      <Button type="link" onClick={handleRemove}>
+        <FontAwesomeIcon icon={faTimes} />
       </Button>
     </div>
   );

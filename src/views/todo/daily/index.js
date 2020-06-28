@@ -3,9 +3,9 @@ import { DailyCard, AddCard } from "../../../component";
 const Daily = (props) => {
   return (
     <>
-      <span className="text-2xl">Today’s Schedule</span>
+      <span className="text-3xl quicksand">Today’s Schedule</span>
       <br />
-      <span className="text-2xl">Thursday 11</span>
+      <span className="text-3xl quicksand text-primary">Thursday 11</span>
       <DailyCard />
       <DailyCard />
       <DailyCard mainCard={false} list={true} />

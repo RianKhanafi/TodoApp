@@ -1,13 +1,43 @@
+* {
+  font-family: "quicksand";
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand"),
+    url(./assets/font/Quicksand-VariableFont_wght.ttf) format("woff");
+}
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: local("Quicksand-Bold"),
+    url(./assets/font/static/Quicksand-Bold.ttf) format("woff");
+}
+
+.bg-primary {
+  background-color: #508cc8 !important;
+}
+.border-primary {
+  border-color: #508cc8 !important;
+}
+.text-primary {
+  color: #508cc8 !important;
+}
+.quicksand {
+  font-family: "Quicksand";
+}
+.quicksand-bold {
+  font-family: "Quicksand-Bold";
 }

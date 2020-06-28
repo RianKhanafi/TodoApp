@@ -6,7 +6,7 @@ import { Daily, Weekly, RightInfo } from "./todo";
 const App = () => {
   return (
     <>
-      <div className="mx-16 mb-16">
+      <div className="mx-16 h-auto pb-32  ">
         <Header />
         <Row>
           <Col md={{ span: 7 }} className="pr-12">
